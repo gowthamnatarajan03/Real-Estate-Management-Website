@@ -1,0 +1,39 @@
+<nav class="navbar" [style.background-color]="navbarColor">
+  <ul>
+    <li class="logo"><img routerLink="/home" src="../assets/logo.png"></li>
+    <div class="listhead" *ngIf="!isMobileView">
+      <li class="list" routerLinkActive="active"><a href="#" routerLink="/signup">SignUp</a></li>
+      <li class="list" routerLinkActive="active"><a href="#" routerLink="/enquiries">Enquiries</a></li>
+      <li class="list" routerLinkActive="active"><a href="#" routerLink="/mortgagecalculator">Mortgage Calculator</a></li>
+      <li class="list" routerLinkActive="active"><a href="#" routerLink="/maps">Map</a></li>
+      <li class="list" routerLinkActive="active"><a href="#" routerLink="/properties">Properties</a></li>
+      <li class="list" routerLinkActive="active"><a href="#" routerLink="/home">Home</a></li> 
+    </div>
+    <button class="hamburger-icon" (click)="toggleMenu()">
+      <span *ngIf="!isMenuOpen">&#9776;</span>
+      <span *ngIf="isMenuOpen">&#10005;</span> 
+    </button>
+    <div class="responsive-menu" *ngIf="isMenuOpen">
+      <li class="list" routerLinkActive="active"><a href="#" routerLink="/signup">SignUp</a></li>
+      <li class="list" routerLinkActive="active"><a href="#" routerLink="/enquiries">Enquiries</a></li>
+      <li class="list" routerLinkActive="active"><a href="#" routerLink="/mortgagecalculator">Mortgage Calculator</a></li>
+      <li class="list" routerLinkActive="active"><a href="#" routerLink="/maps">Map</a></li>
+      <li class="list" routerLinkActive="active"><a href="#" routerLink="/properties">Properties</a></li>
+      <li class="list" routerLinkActive="active"><a href="#" routerLink="/home">Home</a></li> 
+    </div>
+  </ul>
+</nav>
+<router-outlet></router-outlet>
+<footer class="footer">
+  <div class="footer-content">
+    <div class="left cozy">Cozy Management</div>
+    <div class="footer-section">
+      <p routerLink="/properties">Properties</p>
+      <p routerLink="/signin">Tenants</p>
+      <p routerLink="/signup">Contact Us</p>
+    </div>
+    <div class="footer-section right">
+      <p routerLink="enquiries">Enquiries</p>
+    </div>
+  </div>
+</footer>

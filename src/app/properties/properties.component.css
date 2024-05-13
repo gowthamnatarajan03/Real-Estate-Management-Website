@@ -1,0 +1,380 @@
+.properties {
+    background-color: gainsboro;
+    padding-bottom: 50px;
+}
+
+.prop-img {
+    position: relative;
+}
+
+.prop-img img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.prop-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.propoverlay {
+    position: absolute;
+    top: 45%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 1;
+}
+
+.p1 {
+    font-size: 90px;
+    margin-bottom: 60px;
+    color: rgb(213, 211, 211);
+    letter-spacing: 3px;
+}
+
+.p2 {
+    width: 90%;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 3px;
+}
+
+.prop-desc {
+    margin: 50px auto;
+    width: 80%;
+}
+
+.prop-desc p {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.list-of-prop {
+    border: 1px solid black;
+    border-radius: 18px;
+    width: 80%;
+    margin: 0 auto;
+    background-color: lightgray;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    margin: 0 auto;
+    max-width: 900px; 
+    position: relative;
+}
+
+.heading-button {
+    display: flex;
+    justify-content: space-around;
+    margin: 70px 0;
+}
+
+.add {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 13px 10px 0 10px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.add:hover {
+    color: white;
+    background-color: black;
+    transition: 0.5s ease;
+}
+
+.plusicon {
+    margin-right: 5px;
+}
+
+.search input[type="text"] {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.searchicon {
+    margin-left: 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    color:white;
+    background-color: black;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.searchicon:hover {
+    color: black;
+    background-color: white;
+    transition: 0.3s ease;
+}
+
+.search-add {
+    display: flex;
+    gap: 90px;
+}
+
+.filter-button {
+    font-size: 18px;
+    letter-spacing: 2px;
+    border: 1px solid black;
+    padding: 10px 5px 10px;
+    margin: 0 0 50px 115px;
+    width: 10%;
+    text-align:center;
+    cursor: pointer;
+}
+
+.filtericon {
+    margin-left: 10px;
+}
+
+.filter-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.filteroptions {
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    margin: 0 0 50px 115px;
+    padding: 20px;
+    width: 20%;
+}
+
+.filteroptions h3 {
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+}
+
+.okbtn, .closebtn {
+    padding: 8px;
+    letter-spacing: 2px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.okbtn:hover, .closebtn:hover {
+    filter: brightness(2);
+    cursor: pointer;
+}
+
+.card {
+    border: 1px solid black;
+    border-radius: 18px;
+    width: 48%; 
+    height: 500px;
+    margin-bottom: 50px;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgb(164, 177, 189);
+}
+
+.card img {
+    width: 100%;
+    height: 230px;
+    border-top-right-radius: 18px;
+    border-top-left-radius: 18px;
+    border-bottom: 1px solid black;
+}
+
+.card h1 {
+    margin-top: 50px;
+}
+
+.cat {
+    position: absolute;
+    margin: 10px 0 0 10px;
+    padding: 5px;
+    border-radius: 18px;
+    color: white;
+}
+
+.cat1 {
+    background-color: rgb(217, 10, 10);
+}
+
+.cat2 {
+    background-color: rgb(100, 10, 217);
+}
+
+.cat3 {
+    background-color: rgb(196, 183, 5);
+}
+
+.cat4 {
+    background-color: rgb(10, 217, 20);
+}
+
+.desc {
+    margin-top: 40px;
+}
+
+.price {
+    font-weight: 500;
+}
+
+@media screen and (max-width: 1400px) {
+    .p1 {
+       font-size: 77px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .propoverlay {
+        top:55%;
+    }
+    .p1 {
+        font-size: 62px;
+    }
+    .card {
+        width: 40%;
+    }
+    .flex {
+        justify-content: space-around;
+    }
+
+    .filter-button {
+        width: 18%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .p1 {
+        font-size: 47px;
+    }
+
+    .list-of-prop {
+        width: 90%;
+    }
+
+    .desc {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .propoverlay {
+        left: 50%;
+        width: 500px;
+    }
+
+    .heading-button {
+        margin-top: 40px;
+        flex-direction: column;
+    }
+
+    .heading-button h1{
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .search-add {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .add {
+        padding-top: 7px;
+    }
+
+    .filter-button {
+        margin-left: 40px;
+    }
+
+    .filteroptions {
+        margin-left: 40px;
+        width: 30%;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+
+    .card {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .propoverlay {
+        width: 400px;
+    }
+
+    .p1 {
+        font-size: 40px;
+    }
+
+    .p2 {
+        font-size: 18px;
+    }
+
+    .search-add {
+        flex-direction: column;
+        margin: auto;
+        gap: 20px;
+    }
+
+    .add {
+        padding-bottom: 10px;
+        text-align: center;
+    }
+
+
+    .filter-button {
+        width: 21%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .propoverlay {
+        width: 280px;
+        left: 52%;
+    }
+    .p1 {
+        font-size: 26px;
+    }
+
+    .p2 {
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .filter-button {
+        width: 40%;
+        margin-left: 20px;
+    }
+
+    .filteroptions {
+        width: 50%;
+        margin-left: 20px; 
+    }
+
+    .card {
+        width:95%;
+    }
+
+    .desc {
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,48 @@
+<div class="signup-form">
+    
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <div class = "signup-head">
+        <img src="../assets/logo.png">
+        <h2>Cozy Management</h2>
+    </div>
+    <div class = "signup-acc">
+        <p>Sign Up For an Account<p>
+    </div>
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" formControlName="username">
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input type="text" id="email" formControlName="email">
+        <div class="error-message" *ngIf="signupForm.get('email')?.invalid && signupForm.get('email')?.touched">
+            Invalid email address.
+        </div>
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" formControlName="password" (blur)="signupForm.get('password')?.markAsTouched()">
+        <div *ngIf="signupForm.get('password')?.touched">
+            <div class="error-message" *ngIf="signupForm.get('password')?.hasError('invalidPassword')">
+                Password must contain at least 8 characters, including one uppercase letter, one lowercase letter, one number, and one special character.
+            </div>
+        </div>
+    </div>
+    <div>
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" formControlName="confirmPassword" (blur)="signupForm.get('confirmPassword')?.markAsTouched()">
+        <div *ngIf="signupForm.get('confirmPassword')?.touched">
+            <div class="error-message" *ngIf="signupForm.hasError('mismatch')">
+                Passwords do not match.
+            </div>
+        </div>
+    </div>
+    <div class="error-message" *ngIf="formSubmitted && signupForm.invalid">
+      Please fill the form correctly.
+  </div>
+  <button type="submit">SignUp</button>
+  <div class = "login-here">
+    <p>Already Have an Account? <a href="" routerLink="/signin">SignIn Here!</a></p>
+  </div>
+  </form>
+</div>

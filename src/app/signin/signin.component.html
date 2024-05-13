@@ -1,0 +1,33 @@
+<div class="signin-form">
+<form (ngSubmit)="login()" #loginForm="ngForm">
+  <div class = "signin-head">
+    <img src="../assets/logo.png">
+    <h2>Cozy Management</h2>
+</div>
+<div class = "signin-acc">
+    <p>Sign In<p>
+</div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" name="password" [(ngModel)]="password" required>
+    </div>
+    <button type="submit" class="btn btn-primary">SignIn</button>
+
+    <div class="success-message" *ngIf="loginSuccess">
+      SignIn successful!
+    </div>
+
+    <div class="error-message" *ngIf="loginFailed">
+      Invalid email or password.
+    </div>
+  <div class = "to-signup">
+    <a href="" routerLink="/signup">Forgot password?</a>
+    <p>Don't have an account? <a href="" routerLink="/signup">Sign up here</a></p>
+  </div>
+  </form>
+
+</div>

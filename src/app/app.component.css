@@ -1,0 +1,181 @@
+nav {
+display: flex;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 10px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  margin-top: 10px;
+  margin-left: 20px;
+  width: 35px;
+  height: 35px;
+  float: left;
+  cursor: pointer;
+}
+
+.listhead {
+  position: absolute;
+  right: 1%;
+}
+
+.navbar .list {
+  float: right;
+}
+
+.navbar .list a {
+  display: block;
+  color: white; 
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar .list.active {
+  border-bottom: 2px solid rgb(255, 255, 255); 
+}
+
+.hamburger-icon {
+  position: absolute;
+  right: 5%;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+
+.hamburger-icon span {
+  width: 100%;
+  height: 5px;
+  color: white;
+  transition: all 0.3s ease;
+  font-size: 20px;
+}
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+}
+
+.footer-section {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-section p {
+  cursor: pointer;
+}
+
+.cozy {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 100px;
+}
+
+.right {
+  position: absolute;
+  right: 1%;
+}
+
+@media screen and (max-width: 992px) {
+  .cozy {
+    margin-left: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .listhead {
+    display: none;
+  }
+
+  .hamburger-icon {
+    display: flex;
+  }
+
+  .responsive-menu {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    padding: 20px;
+  }
+
+  .responsive-menu .list {
+    margin-bottom: 10px;
+  }
+  .navbar .list.active {
+    border-bottom: none;
+    background-color: rgb(42, 41, 41);
+    color: white;
+    padding: 5px;
+    border-radius: 5px; 
+  }
+
+  .cozy {
+    margin: 0 25px;
+  }
+
+}
+
+@media screen and (max-width: 576px) {
+  .cozy {
+    margin: 0 10px;
+    width: 10px;
+  }
+
+  .footer-section {
+    margin-left: 110px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .cozy {
+    font-size: 17px;
+ padding-top: 50px;
+  }
+
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .right {
+    padding-top: 62px;
+  }
+}
+

@@ -1,0 +1,124 @@
+<section class="properties">
+    <div class="prop-img">
+        <img src="../assets/spacejoy-c0JoR_-2x3E-unsplash.jpg">
+        <div class="propoverlay">
+            <p class="p1">{{ propoverlaytext1 }}</p>
+            <p class="p2">{{ propoverlaytext2 }}</p>
+        </div>
+    </div>
+    <div class="prop-desc">
+        <p>{{ propdesc }}</p>
+    </div>
+    <div class = "list-of-prop">
+        <div class = "heading-button">
+            <h1>{{ heading }}</h1>
+            <div class="search-add">
+            <div class="search">
+                <input type="text" placeholder="Search" [(ngModel)]="searchTerm" (input)="filterItems()">
+                <fa-icon class="searchicon" [icon]="searchicon"></fa-icon>
+              </div>
+            <span class = "add"><fa-icon class="plusicon" [icon]="plusicon"></fa-icon>{{ add }}</span>
+        </div>
+        </div>
+
+        <div class="filterby">
+            <button (click)="toggleFilters()" class="filter-button">Filter <fa-icon [icon]="filtericon"></fa-icon></button>
+
+            <div class = "filteroptions" *ngIf="showFilters">
+                <h3>Filter by Category:</h3>
+                <label><input type="checkbox" (change)="onCheckboxChange('category1')" [checked]="isCategoryChecked('category1')"> Residential</label><br>
+                <label><input type="checkbox" (change)="onCheckboxChange('category2')" [checked]="isCategoryChecked('category2')"> Commercial</label><br>
+                <label><input type="checkbox" (change)="onCheckboxChange('category3')" [checked]="isCategoryChecked('category3')"> Industrial</label><br>
+                <label><input type="checkbox" (change)="onCheckboxChange('category4')" [checked]="isCategoryChecked('category4')"> Land</label><br>
+                <div class = "btn">
+                <button class="okbtn" (click)="applyFilters()">OK</button>
+                <button class="closebtn" (click)="cancelFilters()">Close</button>
+                </div>
+              </div>
+        </div>
+        
+        <div class="flex">
+        <div *ngFor="let item of filteredItems1" class="card">
+            <img [src]="item.imageUrl1" alt="Real Estate Image">
+            <p class = "cat cat1">{{ item.category1 }}</p>
+            <h1>{{ item.title1 }}</h1>
+            <p class="price">{{ item.price1 }}</p>
+            <p class = "desc">{{ item.description }}</p>
+        </div>
+        <div *ngFor="let item of filteredItems2" class="card">
+            <img [src]="item.imageUrl2" alt="Real Estate Image">
+            <p class = "cat cat2">{{ item.category2 }}</p>
+            <h1>{{ item.title2 }}</h1>
+            <p class="price">{{ item.price2 }}</p>
+            <p class = "desc">{{ item.description }}</p>
+        </div>
+        
+        
+        
+        <div *ngFor="let item of filteredItems3" class="card">
+            <img [src]="item.imageUrl3" alt="Real Estate Image">
+            <p class = "cat cat3">{{ item.category3 }}</p>
+            <h1>{{ item.title3 }}</h1>
+            <p class="price">{{ item.price3 }}</p>
+            <p class = "desc">{{ item.description }}</p>
+        </div>
+        <div *ngFor="let item of filteredItems4" class="card">
+            <img [src]="item.imageUrl4" alt="Real Estate Image">
+            <p class = "cat cat1">{{ item.category1 }}</p>
+            <h1>{{ item.title4 }}</h1>
+            <p class="price">{{ item.price4 }}</p>
+            <p class = "desc">{{ item.description }}</p>
+        </div>
+        
+        
+        
+        <div *ngFor="let item of filteredItems5" class="card">
+            <img [src]="item.imageUrl5" alt="Real Estate Image">
+            <p class = "cat cat1">{{ item.category1 }}</p>
+            <h1>{{ item.title5 }}</h1>
+            <p class="price">{{ item.price5 }}</p>
+            <p class = "desc">{{ item.description }}</p>
+        </div>
+        <div *ngFor="let item of filteredItems6" class="card">
+            <img [src]="item.imageUrl6" alt="Real Estate Image">
+            <p class = "cat cat3">{{ item.category3 }}</p>
+            <h1>{{ item.title6 }}</h1>
+            <p class="price">{{ item.price6 }}</p>
+            <p class = "desc">{{ item.description }}</p>
+        </div>
+        
+        
+        
+        <div *ngFor="let item of filteredItems7" class="card">
+            <img [src]="item.imageUrl7" alt="Real Estate Image">
+            <p class = "cat cat2">{{ item.category2 }}</p>
+            <h1>{{ item.title7 }}</h1>
+            <p class="price">{{ item.price7 }}</p>
+            <p class = "desc">{{ item.description }}</p>
+        </div>
+        <div *ngFor="let item of filteredItems8" class="card">
+            <img [src]="item.imageUrl8" alt="Real Estate Image">
+            <p class = "cat cat4">{{ item.category4 }}</p>
+            <h1>{{ item.title8 }}</h1>
+            <p class="price">{{ item.price8 }}</p>
+            <p class = "desc">{{ item.description }}</p>
+        </div>
+        
+        <div *ngFor="let item of filteredItems9" class="card">
+            <img [src]="item.imageUrl9" alt="Real Estate Image">
+            <p class = "cat cat1">{{ item.category1 }}</p>
+            <h1>{{ item.title9 }}</h1>
+            <p class="price">{{ item.price9 }}</p>
+            <p class = "desc">{{ item.description }}</p>
+        </div>
+        <div *ngFor="let item of filteredItems10" class="card">
+            <img [src]="item.imageUrl10" alt="Real Estate Image">
+            <p class = "cat cat4">{{ item.category4 }}</p>
+            <h1>{{ item.title10 }}</h1>
+            <p class="price">{{ item.price10 }}</p>
+            <p class = "desc">{{ item.description }}</p>
+        </div>
+    </div>
+    </div>
+</section>
+

@@ -1,0 +1,452 @@
+.homepage01 {
+position: relative;
+}
+
+.homepage01 img {
+width: 100%;
+height: 100vh;
+display: block;
+}
+
+.homepage01::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.6);
+}
+
+.homepage01 a {
+margin-top: 10px;
+}
+
+.overlay {
+position: absolute;
+top: 55%;
+left: 50%;
+transform: translate(-50%, -50%);
+line-height: 70px;
+text-align: center;
+color: white;
+z-index: 1;
+}
+
+.overlay h3 {
+font-size: 1rem;
+
+}
+.interfaceButton{
+display: flex;
+justify-content: space-around;
+}
+
+.interfaceButton a {
+margin-top: 20px;
+color: white;
+border: 1px solid white;
+}
+
+.interfaceButton a:hover {
+background-color: white;
+color: black;
+transition: 0.5s ease;
+}
+
+.changing-text {
+width: 700px;
+margin-top: 10px;
+font-size: 3rem;
+letter-spacing: 3px;
+opacity: 1;
+transition: opacity 0.5s ease-in-out; 
+}
+
+.fade-out {
+opacity: 0;
+}
+
+.indicator {
+position: relative;
+width: 40px;
+height: 40px;
+transform: rotate(45deg);
+margin: 77px auto 0;
+cursor: pointer;
+}
+
+.indicator span {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+display: block;
+border: none;
+border-right: 3px solid white;
+border-bottom: 3px solid white;
+animation: animate 3s linear infinite;
+}
+
+.indicator span:nth-child(1) {
+top: -30px;
+left: -30px;
+animation-delay: 0s;
+}
+
+.indicator span:nth-child(2) {
+top: -15px;
+left: -15px;
+animation-delay: 0.2s;
+}
+
+.indicator span:nth-child(3) {
+top: 0px;
+left: 0px;
+animation-delay: 0.4s;
+}
+
+.indicator span:nth-child(4) {
+top: 15px;
+left: 15px;
+animation-delay: 0.6s;
+}
+
+@keyframes animate {
+0% {
+    border-color: white;
+    transform: translate(0,0);
+}
+
+20% {
+    border-color: white;
+    transform: translate(15px,15px);
+}
+
+20.1%,100% {
+    border-color: #7b7b7b;
+}
+}
+
+.homepage02 img {
+width: 40vw;
+height: 100vh;
+}
+
+.homepage02 .about {
+display: flex;
+}
+
+.about-description {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+row-gap: 10px;
+line-height: 30px;
+background-color: rgb(251, 251, 235);
+}
+
+.about-description p {
+font-size: 20px;
+width: 60%;
+}
+.homepage03 {
+height: 100vh;
+background-color: rgb(235, 235, 230);
+}
+
+.management-head {
+text-align: center;
+}
+
+.home03height {
+  height: 700px;
+}
+
+.management-body {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 20px;
+margin: 50px auto;
+max-width: 1000px;
+}
+
+.management-body > div {
+border: 1px solid #000000;
+padding: 20px;
+border-radius: 18px;
+width: 90%;
+margin: 0 auto;
+}
+
+.management-body h4 {
+font-size: 25px;
+color: gray;
+}
+
+.management-body p {
+font-size: 20px;
+line-height: 25px;
+color: black;
+}
+
+.contact {
+position: relative;
+}
+
+.contact img {
+height: 100vh;
+width: 100%;
+position: relative;
+}
+
+.contact::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5); 
+z-index: 1;
+}
+
+.left-content {
+position: absolute;
+top: 60%; 
+left: 100px;
+transform: translateY(-50%);
+z-index: 2;
+}
+
+.left-field {
+  left: 40%; 
+}
+
+.right-field {
+  display: none;
+}
+
+.input-field {
+background-color: transparent;
+border: 1px solid white;
+border-radius: 10px;
+padding: 20px;
+width: 500px;
+margin-bottom: 20px;
+}
+
+textarea {
+height: 150px;
+}
+
+.input-field::placeholder,
+.textarea-field::placeholder {
+color: white; 
+}
+
+.mat-mdc-outlined-button:not(:disabled) {
+color: white;
+border: 1px solid white;
+padding: 20px;
+border-radius: 10px;
+}
+
+.mat-mdc-outlined-button:not(:disabled):hover {
+color: black;
+background-color: white;
+border: 1px solid black;
+}
+
+.right-content {
+position: absolute;
+top: 38%; 
+right: 1%;
+transform: translateY(-50%);
+z-index: 2;
+color: white;
+}
+
+.right-content h3 {
+font-size: 25px;
+letter-spacing: 5px;
+}
+
+.right-content p {
+font-size: 20px;
+letter-spacing: 5px;
+}
+
+.text-overlay {
+position: absolute;
+top: 15%; 
+left: 50%; 
+transform: translate(-50%, -50%);
+z-index: 2;
+}
+
+.text-overlay h3 {
+font-size: 30px;
+color: white;
+letter-spacing: 7px;
+}
+
+@media screen and (max-width: 1400px) {
+  .right-content {
+    left: 60%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+  .indicator {
+    margin-top: 50px;
+  }
+
+  .homepage03 {
+    height: auto;
+    padding-bottom: 10px;
+    }
+
+  .management-body > div {
+    width: 70%;
+    }
+
+  .input-field {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .homepage01 img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; 
+  }
+
+  .overlay {
+    line-height: 50px;
+  }
+
+  .indicator {
+    width: 30px;
+    height: 30px;
+    margin-top: 60px;
+  }
+
+  .homepage02 img {
+    width: 50vw;
+    }
+
+  .about-description p {
+    font-size: 16px;
+    width: 90%;
+    }
+
+  .management-body p {
+      font-size: 18px;
+   }
+
+   .input-field {
+    width: 300px;
+  }
+
+  .left-content {
+    left: 50px;
+    }
+
+  .right-content {
+    left: 55%;
+    }
+  
+  .right-content p{
+    font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+  .changing-text {
+    font-size: 2.5rem;
+    width: 500px;
+  }
+
+  .homepage02 {
+    position: relative;
+  }
+
+  .homepage02 img {
+    width: 100vw;
+    }
+
+  .about-description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+  }
+  .management-body {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .text-overlay {
+    width: 365px;
+    left: 55%;
+    top: 8%;
+  }
+
+  .left-content {
+    left: 5%;
+  }
+  .right-content {
+    top: 50%;
+  }
+
+  .input-field {
+    width: 230px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+div.overlay {
+  width: 480px;
+}
+.overlay p {
+  width: 480px;
+}
+.input-field {
+  width: 400px;
+}
+.right-content {
+  display: none;
+}
+}
+
+@media screen and (max-width: 480px) {
+  .changing-text {
+    font-size: 2rem;
+  }
+  
+  div.overlay{
+    width: 300px;
+  }
+  .overlay p {
+  width: 300px;
+}
+div.text-overlay {
+  width: 260px;
+}
+div.text-overlay h3{
+  width: 260px;
+}
+.input-field {
+  width: 235px;
+}
+}
+

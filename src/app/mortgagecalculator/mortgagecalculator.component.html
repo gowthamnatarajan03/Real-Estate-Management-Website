@@ -1,0 +1,59 @@
+<div class="mortgage">
+<div class="mort-img">
+    <img src="../assets/tierra-mallorca-rgJ1J8SDEAY-unsplash.jpg">
+</div>
+<div class="mortoverlay">
+    <h2>How a Mortgage Calculator Can Help ?</h2>
+    <p>Buying a Real-Estate-Property is one of the largest purchase most people will make, so you should think carefully about how you're going to finance it. You can adjust the property price, down payment and mortgage terms to see how your monthly payment will change.</p>
+    <div class="mort-btn">
+      <button (click)="scrollToCalcPie()">Let's Calculate</button>
+    </div>
+</div>
+<div class="calc-pie" #calcPie>
+<div class="mortgage-calculator">
+  <div>
+    <h2>Mortgage Calculator</h2>
+  </div>
+    <div class="input-group">
+      <label for="propertyPrice">Property Price (₹):</label>
+      <input type="number" id="propertyPrice" [(ngModel)]="propertyPrice" />
+    </div>
+    <div class="input-group">
+      <label for="downPayment">Down Payment (₹):</label>
+      <input type="number" id="downPayment" [(ngModel)]="downPayment" />
+      <div *ngIf="downPayment > propertyPrice" class="warning">Down payment can't exceed property price!</div>
+    </div>
+    <div class="input-group">
+      <label for="interestRate">Interest Rate (%):</label>
+      <input type="number" id="interestRate" [(ngModel)]="interestRate" />
+    </div>
+    <div class="input-group">
+      <label for="loanTerm">Loan Term (years):</label>
+      <input type="number" id="loanTerm" [(ngModel)]="loanTerm" />
+    </div>
+    <div class="input-group">
+      <label for="propertyTax">Property Tax (₹/year):</label>
+      <input type="number" id="propertyTax" [(ngModel)]="propertyTax" />
+    </div>
+    <div class="input-group">
+      <label for="propertyInsurance">Property Insurance (₹/year):</label>
+      <input type="number" id="propertyInsurance" [(ngModel)]="propertyInsurance" />
+    </div>
+    <button (click)="calculate()" class="calc">Calculate</button>
+    <div class="mon-life-pay" *ngIf="monthlyPayment">
+      <div class="month-box">
+      <h3>Monthly Payment: ₹{{ monthlyPayment | number: '1.2-2' }}</h3>
+      </div>
+      <div class="life-box">
+      <h3>Total Lifetime Payments: ₹{{ totalLifetimePayments | number: '1.2-2' }}</h3>
+      </div>
+    </div>
+  </div>
+  
+  <div class="chart">
+    <h2>Monthly Payment Graph</h2>
+  <canvas id="myPieChart"></canvas>
+  </div>
+</div>
+</div>
+  
