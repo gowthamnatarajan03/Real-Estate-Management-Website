@@ -52,13 +52,33 @@ margin-bottom: 5px;
 }
 
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+input[type="text"] {
 width: 100%;
 padding: 8px;
 margin-bottom: 10px;
 border: 1px solid #ccc;
 border-radius: 4px;
 }
+
+.password-container {
+    position: relative;
+  }
+  
+  .toggle-password {
+    position: absolute;
+    top: 40%;
+    left: 94%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .toggle-password fa-icon {
+    font-size: 1.2em;
+    color: #555;
+  }
 
 button[type="submit"] {
 background-color: #4CAF50;

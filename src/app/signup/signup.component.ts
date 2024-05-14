@@ -1,6 +1,7 @@
 import { Component, OnInit, HostListener, Renderer2 } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 function passwordMatchValidator(control: AbstractControl) {
   const password = control.get('password')?.value;
@@ -16,9 +17,13 @@ function passwordMatchValidator(control: AbstractControl) {
 export class SignupComponent implements OnInit {
   signupForm!: FormGroup;
   formSubmitted: boolean = false;
+  showPassword: boolean = false;
+  showConfirmPassword: boolean = false;
+
+  icon01 = faEyeSlash;
+  icon02 = faEye;
 
   constructor(private formBuilder: FormBuilder, private router: Router, private renderer: Renderer2) {}
-
 
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
@@ -32,7 +37,6 @@ export class SignupComponent implements OnInit {
       password: ['', [Validators.required, this.passwordValidator]],
       confirmPassword: ['', Validators.required]
     }, { validators: passwordMatchValidator });
-
 
     this.signupForm.get('password')?.valueChanges.subscribe(() => {
       this.signupForm.get('confirmPassword')?.updateValueAndValidity();
@@ -55,9 +59,16 @@ export class SignupComponent implements OnInit {
     if (this.signupForm.valid) {
       sessionStorage.setItem('email', this.signupForm.value.email);
       sessionStorage.setItem('password', this.signupForm.value.password);
-
       this.router.navigate(['/signin']);
     }
+  }
+
+  toggleShowPassword() {
+    this.showPassword = !this.showPassword;
+  }
+
+  toggleShowConfirmPassword() {
+    this.showConfirmPassword = !this.showConfirmPassword;
   }
 
   updateStyles() {
@@ -79,5 +90,5 @@ export class SignupComponent implements OnInit {
         this.renderer.removeClass(element1, 'form-pad-top');
       }
     }
-  } 
+  }
 }
