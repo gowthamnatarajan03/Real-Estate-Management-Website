@@ -75,3 +75,6 @@ Please make sure to update tests as appropriate and adhere to the coding standar
 ## License
 
 This project is licensed under the [MIT License](LICENSE). Feel free to modify and distribute this code for both personal and commercial use.
+
+## Contact
+For any inquiries or feedback, please contact me at [gowthamnatarajan03@gmail.com](mailto:gowthamnatarajan03@gmail.com).
