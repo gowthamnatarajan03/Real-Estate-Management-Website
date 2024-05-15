@@ -2,6 +2,10 @@
 
 Welcome to the repository! This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.5. Below you'll find information on how to get started with the project, contribute to it, and any additional resources you may need.
 
+**[LIVE DEMO](https://cozyrem.netlify.app/)**
+
+![cozyrem-homepage](https://github.com/gowthamnatarajan03/Real-Estate-Management-Website/assets/165258291/0b7fe314-5bf3-4be1-8dc9-ab73cb36ab70)
+
 ## Table of Contents
 
 - [Getting Started](#getting-started)
