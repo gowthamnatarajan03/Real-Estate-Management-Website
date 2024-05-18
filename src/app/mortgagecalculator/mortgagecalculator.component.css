@@ -151,14 +151,14 @@ border-radius: 5px;
 @media screen and (max-width: 992px) {
   
 .mortoverlay {
-padding-top: 10rem;
+padding-top: 5rem;
 }
 }
 
 @media screen and (max-width: 768px) {
 
 .mortoverlay {
-padding-top: 8rem;
+padding-top: 4rem;
 }
 
 .mortoverlay h2{

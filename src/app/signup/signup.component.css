@@ -40,6 +40,8 @@ margin-bottom: 35px;
 .signup-acc p{
 text-align: center;
 font-size: 18px;
+display: inline;
+line-height: 35px;
 }
 
 .signup-head img {
@@ -105,6 +107,7 @@ color: red;
 
 .login-here {
 margin-top: 25px;
+line-height: 25px;
 }
 
 .login-here a{
@@ -129,5 +132,9 @@ form {
 width: 150px;
 padding-right: 90px;
 padding-bottom: 20px;
+}
+
+.signup-head h2 {
+    display: none;
 }
 }

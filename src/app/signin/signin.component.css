@@ -34,7 +34,9 @@ letter-spacing: 2px;
 }
 
 .signin-acc {
+margin-top: 10px;
 margin-bottom: 35px;
+display: inline-block;
 }
 
 .signin-acc p{
@@ -95,14 +97,10 @@ background-color: #45a049;
 }
 
 .to-signup {
-margin-top: 20px;
+margin-top: 25px;
 display: flex;
 flex-direction: column;
 gap: 20px;
-}
-
-.to-signup {
-margin-top: 25px;
 }
 
 .to-signup a{
@@ -112,6 +110,10 @@ color: rgb(31, 10, 166);
 
 .to-signup a:hover{
 filter: brightness(2);
+}
+
+.to-signup p {
+line-height: 25px;
 }
 
 .error-message {
@@ -133,15 +135,21 @@ color: green;
 }
 
 @media screen and (max-width: 576px) {
+
 form {
 width: 300px;
 }
 }
 
 @media screen and (max-width: 480px) {
+
 form {
 width: 150px;
 padding-right: 90px;
 padding-bottom: 20px;
+}
+
+.signin-head h2 {
+display: none;
 }
 }
