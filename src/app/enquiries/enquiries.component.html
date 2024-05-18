@@ -1,9 +1,9 @@
 <div class="enquiries">
-    <div class="enq-img">
-        <img [src]="currentImage" alt="Enquiry Background">
-    </div>
-    <div class="enqoverlay">
+    <div class="enq-img" [ngStyle]="{'background-image': 'url(' + currentImage + ')'}">
+      <div class="enqoverlay">
         <h1>You Need To Sign In First</h1>
         <button routerLink="/signin">Sign In</button>
+      </div>
     </div>
-</div>
+  </div>
+  

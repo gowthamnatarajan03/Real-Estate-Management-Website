@@ -4,7 +4,7 @@ import Chart from 'chart.js/auto';
 @Component({
   selector: 'app-mortgagecalculator',
   templateUrl: './mortgagecalculator.component.html',
-  styleUrls: ['./mortgagecalculator.component.css']
+  styleUrl: './mortgagecalculator.component.css'
 })
 export class MortgagecalculatorComponent implements OnInit {
 

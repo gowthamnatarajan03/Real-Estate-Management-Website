@@ -1,16 +1,17 @@
 .signup-form {
 background-color:darkblue;
-height: 100vh;
+min-height: 100vh;
 padding-top: 100px;
+padding-bottom: 100px;
 }
 
 .signup-form-pad {
- max-width: 600px;
- height: 70vh;
+max-width: 600px;
+min-height: 70vh;
 }
 
 .form-pad-top {
-    padding-top: 100px;
+padding-top: 100px;
 }
 
 form {
@@ -61,24 +62,24 @@ border-radius: 4px;
 }
 
 .password-container {
-    position: relative;
-  }
-  
-  .toggle-password {
-    position: absolute;
-    top: 40%;
-    left: 94%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .toggle-password fa-icon {
-    font-size: 1.2em;
-    color: #555;
-  }
-  
+position: relative;
+}
+
+.toggle-password {
+position: absolute;
+top: 40%;
+left: 94%;
+transform: translateY(-50%);
+background: none;
+border: none;
+cursor: pointer;
+}
+
+.toggle-password fa-icon {
+font-size: 1.2em;
+color: #555;
+}
+
 
 button[type="submit"] {
 background-color: #4CAF50;
@@ -116,12 +117,14 @@ filter: brightness(2);
 }
 
 @media screen and (max-width: 576px) {
+
 form {
 width: 300px;
 }
 }
 
 @media screen and (max-width: 480px) {
+
 form {
 width: 150px;
 padding-right: 90px;

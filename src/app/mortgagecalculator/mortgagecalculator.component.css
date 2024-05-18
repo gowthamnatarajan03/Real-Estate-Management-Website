@@ -1,242 +1,196 @@
 .mortgage {
-    background-color: #e1d8c8;
+background-color: #e1d8c8;
 }
 
-.mort-img img{
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-}
-
-.mort-img::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.mortoverlay {
-    position: absolute;
-    top: 50%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+.mort-img {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 100%;
+min-height: 100vh;
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
 }
 
 .mortoverlay h2 {
-font-size: 40px;
+font-size: 60px;
 letter-spacing: 2px;
 color: rgb(180, 193, 193);
 margin-bottom: 50px;
+line-height: 5rem;
+}
+
+.mortoverlay p {
+font-size: 25px;
+letter-spacing: 2px;
+line-height: 30px;
+color: rgb(214, 227, 227);
+margin-bottom: 50px;
+}
+
+.mortoverlay {
+background-color: rgba(0, 0, 0, 0.5);
+min-height: 100vh;
+padding: 5rem 1.5rem 2rem 2rem;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+}
+
+.mort-btn button {
+padding: 10px;
+border: none;
+border-radius: 5px;
+font-size: 20px;
+letter-spacing: 2px;
+cursor: pointer;
+animation: pulse 0.7s infinite alternate;
+}
+
+.mort-btn button a {
+text-decoration: none;
+color: black;
+}
+
+@keyframes pulse {
+0% {
+transform: scale(1);
+}
+100% {
+transform: scale(1.1);
+}
+}
+
+.mort-btn button:hover {
+animation: none;
+}
+
+.calc-pie {
+display: flex;
+justify-content: space-between;
+margin-top: 50px;
+padding-bottom: 50px;
+}
+
+.chart {
+width: 40%;
+}
+
+.chart h2 {
+text-align: center;
+letter-spacing: 2px;
+margin-top: 40px;
+}
+
+.mortgage-calculator {
+width: 40%;
+margin: 50px 10px 50px 10px;
+padding: 20px;
+border: 1px solid #000000;
+border-radius: 5px;
+}
+
+.mortgage-calculator h2 {
+background-color: black;
+color: white;
+padding: 20px;
+border-radius: 5px;
+}
+
+.input-group {
+margin-bottom: 10px;
+}
+
+label {
+display: block;
+margin-bottom: 5px;
+}
+
+input {
+width: 100%;
+padding: 5px;
+border: 1px solid #ccc;
+border-radius: 3px;
+}
+
+.calc {
+display: block;
+width: 100%;
+padding: 10px;
+background-color: lightcoral;
+color: #000000;
+border: none;
+border-radius: 3px;
+font-size: 20px;
+letter-spacing: 2px;
+cursor: pointer;
+}
+
+.calc:hover {
+background-color: rgb(243, 158, 158);
+}
+
+.mon-life-pay {
+display: flex;
+flex-direction: column;
+gap: 20px;
+margin-top: 20px;
+text-align: center;
+}
+
+.month-box, .life-box {
+background-color: lightslategray;
+color:white;
+padding: 10px 10px 0 10px;
+border-radius: 5px;
+}
+
+@media screen and (max-width: 992px) {
+  
+.mortoverlay {
+padding-top: 10rem;
+}
+}
+
+@media screen and (max-width: 768px) {
+
+.mortoverlay {
+padding-top: 8rem;
+}
+
+.mortoverlay h2{
+margin-bottom: 30px;
+}
+
+.calc-pie {
+flex-direction: column;
+align-items: center;
+}
+
+.mortgage-calculator, .chart {
+width: 70%;
+}
+}
+
+@media screen and (max-width: 576px) {
+
+.mortoverlay h2 {
+font-size: 45px;
+margin-bottom: 20px;
+line-height: 3rem;
 }
 
 .mortoverlay p {
 font-size: 20px;
-letter-spacing: 2px;
-line-height: 30px;
-color: rgb(214, 227, 227);
 }
-
-.mort-btn {
-  position: absolute;
-  bottom: -100%;
-  right: -35%;
-}
-
-.mort-btn button {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  font-size: 20px;
-  letter-spacing: 2px;
-  cursor: pointer;
-  animation: pulse 0.7s infinite alternate;
-}
-
-.mort-btn button a {
-  text-decoration: none;
-  color: black;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.1);
-  }
-}
-
-.mort-btn button:hover {
-  animation: none;
-}
-
-.calc-pie {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 50px;
-  padding-bottom: 50px;
-}
-
-.chart {
-  width: 40%;
-}
-
-.chart h2 {
-  text-align: center;
-  letter-spacing: 2px;
-  margin-top: 40px;
-}
-
-.mortgage-calculator {
-    width: 40%;
-    margin: 50px 10px 50px 10px;
-    padding: 20px;
-    border: 1px solid #000000;
-    border-radius: 5px;
-  }
-
-  .mortgage-calculator h2 {
-    background-color: black;
-    color: white;
-    padding: 20px;
-    border-radius: 5px;
-  }
-  
-  .input-group {
-    margin-bottom: 10px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  input {
-    width: 100%;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-  }
-  
-.calc {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: lightcoral;
-    color: #000000;
-    border: none;
-    border-radius: 3px;
-    font-size: 20px;
-    letter-spacing: 2px;
-    cursor: pointer;
-  }
-  
-.calc:hover {
-    background-color: rgb(243, 158, 158);
-  }
-
-  .mon-life-pay {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 20px;
-    text-align: center;
-  }
-
-  .month-box, .life-box {
-    background-color: lightslategray;
-    color:white;
-    padding: 10px 10px 0 10px;
-    border-radius: 5px;
-  }
-
-@media screen and (max-width: 1400px) {
-  .mortoverlay h2 {
-    font-size: 37px;
-  }
-  .mort-btn {
-    bottom: -65%;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .mortoverlay h2 {
-    font-size: 30px;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .mortoverlay h2 {
-    font-size: 22px;
-  }
-
-  .mortoverlay p {
-    font-size: 18px;
-  }
-
-  .mort-btn {
-    bottom: -40%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .mortoverlay h2 {
-    font-size: 30px;
-  }
-  .mortoverlay {
-    left: 35%;
-}
-
-  .mort-btn {
-    bottom: -25%;
-  }
-
-  .calc-pie {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .mortgage-calculator, .chart {
-    width: 70%;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .mortoverlay h2 {
-    font-size: 22px;
-    margin-bottom: 25px;
-  }
-
-  .mortoverlay p {
-    font-size: 16px;
-  }
 }
 
 @media screen and (max-width: 480px) {
-  .mortoverlay {
-    top: 50%;
-    left: 30%;
-    width: 160px;
-}
-.mortoverlay h2 {
-  font-size: 20px;
-}
 
-.mortoverlay p {
-  font-size: 16px;
-}
-.mortoverlay h2, .mortoverlay p {
-  width: 250px;
-}
-.mort-btn {
-  bottom: -15%;
-  right: -20%;
-}
 .mortgage-calculator {
-  margin-bottom: 25px;
+margin-bottom: 25px;
 }
 }

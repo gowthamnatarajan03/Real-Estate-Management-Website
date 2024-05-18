@@ -1,13 +1,12 @@
 <div class="mortgage">
-<div class="mort-img">
-    <img src="../assets/tierra-mallorca-rgJ1J8SDEAY-unsplash.jpg">
-</div>
+<div class="mort-img" [ngStyle]="{'background-image': 'url(../assets/tierra-mallorca-rgJ1J8SDEAY-unsplash.jpg)'}">
 <div class="mortoverlay">
     <h2>How a Mortgage Calculator Can Help ?</h2>
     <p>Buying a Real-Estate-Property is one of the largest purchase most people will make, so you should think carefully about how you're going to finance it. You can adjust the property price, down payment and mortgage terms to see how your monthly payment will change.</p>
     <div class="mort-btn">
       <button (click)="scrollToCalcPie()">Let's Calculate</button>
     </div>
+</div>
 </div>
 <div class="calc-pie" #calcPie>
 <div class="mortgage-calculator">

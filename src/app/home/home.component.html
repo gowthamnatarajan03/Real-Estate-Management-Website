@@ -1,23 +1,23 @@
 <section class="home">
-<section class="homepage01">
-  <img [src]="backgroundImages[currentIndex]">
-  <div class="overlay">
-    <p>{{ head }}</p>
-    <p [class.fade-out]="changingTextFadeOut" class="changing-text">{{ changingText }}</p>
-    <div class="interfaceButton">
-    <a mat-stroked-button href="" routerLink="/signup">Get Started</a>
-    <a mat-stroked-button href="" routerLink="/properties">Properties</a>
+  <section class="homepage01" [ngStyle]="{'background-image': 'url(' + backgroundImages[currentIndex] + ')'}">
+    <div class="overlay">
+      <p class="overlay-head">{{ head }}</p>
+      <p [class.fade-out]="changingTextFadeOut" class="changing-text">{{ changingText }}</p>
+      <div class="interfaceButton">
+        <a mat-stroked-button href="" routerLink="/signup">Get Started</a>
+        <a mat-stroked-button href="" routerLink="/properties">Properties</a>
+      </div>
+      <div class="indicator" (click)="scrollDown()">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
-    <div class = "indicator" (click) = "scrollDown()">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </div>
-</section>
+  </section>
+  
 
-<section class="homepage02">
+<section class="homepage02" [style.background-image]="backgroundImage02">
   <div class="about">
     <img src="../assets/francesca-tosolini-tHkJAMcO3QE-unsplash.jpg">
     <div class="about-description">
@@ -34,6 +34,7 @@
     </div>
   </div>
 </section>
+
 <section class="homepage03">
   <div class = "management-head">
   <h2>MANAGEMENT SERVICES</h2>
@@ -58,23 +59,24 @@
     </div>
     </div>
 </section>
-<section class="homepage04">
-<div class="contact">
-  <div class="left-content">
-    <input class="input-field" type="text" placeholder="First & Last Name"><br>
-    <input class="input-field" type="email" placeholder="Email"><br>
-    <input class="input-field" type="tel" placeholder="Phone"><br>
-    <textarea class="input-field" placeholder="Describe your property needs"></textarea><br>
-    <a mat-stroked-button href="">Submit</a>
+<section class="homepage04" [ngStyle]="{'background-image': 'url(../assets/czapp-botond-Yc2Q1I8Hazw-unsplash.jpg)'}">
+  <div class="contact">
+    <div class="text-overlay">
+      <h3>LEAVE A MESSAGE</h3>
+    </div>
+    <div class="contact-content">
+      <div class="left-content">
+        <input class="input-field" type="text" placeholder="First & Last Name"><br>
+        <input class="input-field" type="email" placeholder="Email"><br>
+        <input class="input-field" type="tel" placeholder="Phone"><br>
+        <textarea class="input-field" placeholder="Describe your property needs"></textarea><br>
+        <a class="submit-button" href="">Submit</a>
+      </div>
+      <div class="right-content">
+        <h3 class="input-field-description">GET IN TOUCH</h3><br>
+        <p>Let's chat about your real estate management needs.</p>
+      </div>
+    </div>
   </div>
-  <div class="right-content">
-    <h3 class="input-field-description">GET IN TOUCH</h3><br>
-    <p>Let's chat about your real estate management needs.</p>
-  </div>
-  <img src="../assets/czapp-botond-Yc2Q1I8Hazw-unsplash.jpg">
-  <div class = "text-overlay">
-    <h3>LEAVE A MESSAGE</h3>
-  </div>
-</div>
 </section>
 </section>

@@ -1,17 +1,18 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-enquiries',
   templateUrl: './enquiries.component.html',
-  styleUrls: ['./enquiries.component.css']
+  styleUrl: './enquiries.component.css'
 })
-export class EnquiriesComponent {
+export class EnquiriesComponent implements OnInit {
   smallScreenImage = '../assets/Designer2.png';
   largeScreenImage = '../assets/Designer.png';
-  currentImage: string;
+  currentImage: string = '';
 
-  constructor() {
-    this.currentImage = '';
+  constructor() {}
+
+  ngOnInit() {
     this.setCurrentImage();
   }
 

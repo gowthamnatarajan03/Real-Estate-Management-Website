@@ -6,7 +6,7 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit, OnDestroy {
 
@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   changingTexts: string[] = [
     "PROFESSIONAL BOUTIQUE ASSET MANAGEMENT",
     "MAXIMIZING VALUE. MINIMIZING LIABILITY",
-    "COMPETENCY. TRANSPARENCY. PROFESSIONALISM"
+    "COMPETENCY. EXPERTISE"
   ];
 
   backgroundImages: string[] = [
@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     "../assets/interface02.jpg",
     "../assets/interface03.jpg"
   ];
-
+  backgroundImage02: string = "";
   currentIndex: number = 0;
   changingText: string = "";
   changingTextFadeOut: boolean = false;
@@ -114,31 +114,13 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   updateStyles() {
     const screenWidth = window.innerWidth;
-    const element1 = document.querySelector('.homepage03');
-    const element2 = document.querySelector('.left-content');
-    const element3 = document.querySelector('.right-content');
-    
-    if (element1) {
-      if (screenWidth >= 1800 && screenWidth <= 2560) {
-        this.renderer.addClass(element1, 'home03height');
-      } else {
-        this.renderer.removeClass(element1, 'home03height');
-      }
-    }
-    
-    if (element2) {
-      if (screenWidth >= 1800 && screenWidth <= 2560) {
-        this.renderer.addClass(element2, 'left-field');
-      } else {
-        this.renderer.removeClass(element2, 'left-field');
-      }
-    }
 
-    if (element3) {
-      if (screenWidth >= 1800 && screenWidth <= 2560) {
-        this.renderer.addClass(element3, 'right-field');
+    const section = document.querySelector('.homepage04') as HTMLElement; 
+    if (section) {
+      if (screenWidth < 768) {
+        this.backgroundImage02 = 'url(../assets/francesca-tosolini-tHkJAMcO3QE-unsplash.jpg)'; 
       } else {
-        this.renderer.removeClass(element3, 'right-field');
+        this.backgroundImage02 = 'none'; 
       }
     }
   }

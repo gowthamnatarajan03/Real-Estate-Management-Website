@@ -1,85 +1,70 @@
 .enquiries {
-    background-color: rgba(0, 0, 0, 0.5);
+background-color: rgba(0, 0, 0, 0.5);
 }
 
-.enq-img img {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-}
-
-.enq-img::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
+.enq-img {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 100%;
+min-height: 100vh;
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
 }
 
 .enqoverlay {
-    position: absolute;
-    top: 47%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    width: 610px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background-color: rgba(0, 0, 0, 0.5);
+min-height: 100vh;
+width: 100vw;
+padding-top: 50px;
 }
 
 .enqoverlay h1 {
-    color: white;
-    font-size: 50px;
-    letter-spacing: 2px;
-    font-weight: 800;
-    text-shadow: 0 0 10px rgb(53, 223, 44);
-    margin-bottom: 50px;
+color: white;
+font-size: 50px;
+letter-spacing: 2px;
+font-weight: 800;
+text-shadow: 0 0 10px rgb(53, 223, 44);
+margin-bottom: 50px;
 }
 
 .enqoverlay button{
-    width: 100%;
-    font-size: 20px;
-    background-color: white;
-    padding: 10px;
-    color: green;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgb(53, 223, 44);
-    cursor: pointer;
-    transition: transform 0.3s ease;
+font-size: 20px;
+background-color: white;
+padding: 10px;
+color: green;
+border: none;
+border-radius: 5px;
+box-shadow: 0 0 5px rgb(53, 223, 44);
+cursor: pointer;
+transition: transform 0.3s ease;
 }
 
 .enqoverlay button:hover {
-    transform: scale(1.1);
+transform: scale(1.1);
 }
 
 @media screen and (max-width: 768px) {
-    .enqoverlay {
-        width: 500px;
-    }
-
-    .enqoverlay h1 {
-        font-size: 40px;
-    }
+.enqoverlay h1 {
+font-size: 40px;
+}
 }
 
 @media screen and (max-width: 576px) {
-    .enqoverlay {
-        width: 400px;
-    }
-
-    .enqoverlay h1 {
-        font-size: 31px;
-    }
+.enqoverlay h1 {
+font-size: 31px;
+}
 }
 
 @media screen and (max-width: 480px) {
-    .enqoverlay {
-        width: 280px;
-    }
-
-    .enqoverlay h1 {
-        font-size: 20px;
-        margin-bottom: 25px;
-    }
+.enqoverlay h1 {
+font-size: 20px;
+margin-bottom: 25px;
+}
 }

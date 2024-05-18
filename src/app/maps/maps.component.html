@@ -1,9 +1,8 @@
-<div class="maps">
-    <div class="map">
-        <img src = "../assets/actionvance-t7EL2iG3jMc-unsplash.jpg">   
+<div class="maps" [ngStyle]="{'background-image': 'url(../assets/actionvance-t7EL2iG3jMc-unsplash.jpg)'}">
+    <div class="map">  
+        <div class = "map-heading">
+        <div><h2>{{ mapHeading }}</h2></div>
+        <div id="map"></div>
+        </div>
     </div>
-    <div class = "map-heading">
-    <div><h2>{{ mapHeading }}</h2></div>
-    <div id="map"></div>
-</div>
 </div>
