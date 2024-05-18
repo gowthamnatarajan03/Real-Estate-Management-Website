@@ -4,7 +4,7 @@ Welcome to the repository! This project was generated with [Angular CLI](https:/
 
 **[LIVE DEMO](https://cozyrem.netlify.app/)**
 
-![cozyrem-homepage](https://github.com/gowthamnatarajan03/Real-Estate-Management-Website/assets/165258291/0b7fe314-5bf3-4be1-8dc9-ab73cb36ab70)
+![cozyrem-home](https://github.com/gowthamnatarajan03/Real-Estate-Management-Website/assets/165258291/d03d871f-9bfb-4533-bd36-4f7978291901)
 
 ## Table of Contents
 
